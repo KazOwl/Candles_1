@@ -1,0 +1,21 @@
+@import './_colors';
+@import './_components';
+@import './_mixins';
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%; //teraz font size ma tak na prawdę 10px
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.6rem; // 10 * 1.6 = 16 px
+}
