@@ -19,3 +19,61 @@ body {
 	font-family: 'Mukta', sans-serif;
 	font-size: 1.6rem; // 10 * 1.6 = 16 px
 }
+
+//nav
+
+.burger-btn {
+	position: fixed;
+	font-size: inherit;
+	top: 20px;
+	right: 20px;
+	padding: 1em;
+	background: none;
+	border: 1px solid transparent;
+	cursor: pointer;
+	z-index: 10;
+
+	&:focus {
+		outline: none;
+		border: 1px solid rgba(255, 255, 255, 0.5);
+		border-radius: 8px;
+	}
+	&:hover {
+		.burger-btn__bars::after {
+			top: 13px;
+			width: 100%;
+		}
+
+		.burger-btn__bars::before {
+			top: 27px;
+			width: 100%;
+		}
+	}
+
+	&__box {
+		position: relative;
+		width: 40px;
+		height: 30px;
+	}
+
+	&__bars,
+	&__bars::after,
+	&__bars::before {
+		@include burgerBtn;
+	}
+
+	&__bars {
+		width: 100%;
+
+		&::after {
+			top: 13px;
+			width: 60%;
+		}
+
+		&::before {
+			top: 27px;
+			width: 30%;
+			transition-delay: 0.1s;
+		}
+	}
+}
