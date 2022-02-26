@@ -1,0 +1,33 @@
+$main-color: #c4cea1;
+$secondary-color: #fdf2b0;
+$accent-color: #cf9963;
+$dirty-white: #f9f9f9;
+$pure-white: #fff;
+$dark-gray: #5b5b5b;
+$dark: #3c3c3c;
+
+$light-green-gradient: linear-gradient(
+	45deg,
+	rgba(196, 206, 161, 0.75),
+	rgba(138, 144, 116, 0.75)
+);
+$green-gradient: linear-gradient(
+	45deg,
+	rgba(181, 198, 121, 0.75),
+	rgba(120, 133, 76, 0.75)
+);
+$accent-gradient: linear-gradient(
+	45deg,
+	rgba(207, 153, 99, 0.75),
+	rgba(181, 194, 137, 0.75)
+);
+$green-gradient-solid: linear-gradient(
+	45deg,
+	rgb(181, 198, 121),
+	rgb(120, 133, 76)
+);
+$light-blue-gradient-solid: radial-gradient(
+	circle at top right,
+	rgb(181, 198, 121) 0%,
+	rgb(218, 238, 144) 100%
+);
