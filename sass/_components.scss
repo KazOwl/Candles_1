@@ -1,0 +1,52 @@
+//treść zawsze będzie na środku - w centralnym punkcie
+
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 100%;
+}
+
+.white-block {
+	position: absolute;
+	height: 40px;
+	width: 40%;
+	background-color: $pure-white;
+
+	&--left {
+		bottom: 0;
+		left: -50px;
+		transform: skew(45deg);
+	}
+
+	&--right {
+		top: 0;
+		right: -50%;
+		transform: skew(45deg);
+	}
+}
+
+.btn-special-animation {
+	position: relative;
+	transition: background-color 0.3s;
+	overflow: hidden;
+	z-index: 0;
+
+	&::before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		transform: scaleX(0);
+		transform-origin: right;
+		transition: transform 0.3s;
+		z-index: -1;
+	}
+
+	&:hover::before {
+		transform: scaleX(1);
+		transform-origin: left;
+	}
+}
