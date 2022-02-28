@@ -89,6 +89,12 @@ body {
 	width: 100%;
 	background-image: $green-gradient-solid;
 	z-index: 9;
+	transform: translateX(100%);
+	transition: transform 0.5s cubic-bezier(0.065, 0.05, 0.36, 1);
+
+	&--active {
+		transform: translateX(0);
+	}
 
 	&__item {
 		position: relative;

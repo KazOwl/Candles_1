@@ -154,6 +154,17 @@ body {
   width: 100%;
   background-image: linear-gradient(45deg, #b5c679, #78854c);
   z-index: 9;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.065, 0.05, 0.36, 1);
+  transition: -webkit-transform 0.5s cubic-bezier(0.065, 0.05, 0.36, 1);
+  transition: transform 0.5s cubic-bezier(0.065, 0.05, 0.36, 1);
+  transition: transform 0.5s cubic-bezier(0.065, 0.05, 0.36, 1), -webkit-transform 0.5s cubic-bezier(0.065, 0.05, 0.36, 1);
+}
+
+.nav--active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .nav__item {
