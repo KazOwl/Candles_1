@@ -96,6 +96,19 @@ body {
 		transform: translateX(0);
 	}
 
+	@keyframes navAnimationItems {
+		0% {
+			transform: translateX(200%);
+		}
+		100% {
+			transform: translateX(0);
+		}
+	}
+
+	.nav-animation-items {
+		animation: navAnimationItems 1s both;
+	}
+
 	&__item {
 		position: relative;
 		display: block;

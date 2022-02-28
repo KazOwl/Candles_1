@@ -167,6 +167,33 @@ body {
           transform: translateX(0);
 }
 
+@-webkit-keyframes navAnimationItems {
+  0% {
+    -webkit-transform: translateX(200%);
+            transform: translateX(200%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes navAnimationItems {
+  0% {
+    -webkit-transform: translateX(200%);
+            transform: translateX(200%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+.nav .nav-animation-items {
+  -webkit-animation: navAnimationItems 1s both;
+          animation: navAnimationItems 1s both;
+}
+
 .nav__item {
   position: relative;
   display: block;
