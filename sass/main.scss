@@ -228,6 +228,116 @@ body {
 		padding: 1em 0;
 	}
 }
+
+// NEWS
+
+.news {
+	&__card {
+		position: relative;
+		margin: 1em 0;
+		height: 450px;
+		color: $dirty-white;
+		text-align: center;
+		perspective: 1000px;
+
+		&:hover {
+			.news__card-img {
+				transform: rotateY(-180deg);
+				opacity: 0;
+			}
+			.news__card-info {
+				transform: rotateY(0);
+				opacity: 1;
+			}
+		}
+		&-img {
+			padding: 2em;
+			height: 100%;
+			border-radius: 8px;
+			background-size: cover;
+			transition: transform 1s, opacity 1s;
+
+			&--first {
+				background-image: $light-green-gradient, url('../img/field1.jpg');
+				background-position: bottom;
+			}
+			&--second {
+				background-image: $accent-gradient, url('../img/field2.jpg');
+			}
+			&--third {
+				background-image: $green-gradient, url('../img/field3.jpg');
+			}
+
+			&-title {
+				font-family: 'Shadows Into Light', cursive;
+				font-size: 2.8rem;
+				letter-spacing: 5px;
+			}
+			&-info {
+				position: absolute;
+				bottom: 30px;
+				right: 30px;
+				font-size: 1.8rem;
+
+				i {
+					margin-right: 0.4rem;
+				}
+			}
+		}
+
+		&-info {
+			position: absolute;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			top: 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			background-image: $green-gradient-solid;
+			border-radius: 8px;
+			opacity: 0;
+			transform: rotateY(180deg);
+			transition: transform 1s, opacity 1s;
+
+			&-title {
+				position: absolute;
+				left: 50%;
+				top: 1.2em;
+				transform: translateX(-50%);
+				font-family: 'Shadows Into Light', cursive;
+				font-size: 2.8rem;
+				letter-spacing: 5px;
+			}
+
+			&-list {
+				margin: 0 auto;
+				width: 70%;
+				list-style: none;
+
+				&-item {
+					padding: 1em;
+					font-size: 1.4rem;
+					border-bottom: 1px solid $dirty-white;
+
+					&:last-child {
+						border-bottom: none;
+					}
+				}
+			}
+
+			&-btn {
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+				bottom: 2em;
+				cursor: pointer;
+				padding: 1em;
+			}
+		}
+	}
+}
+
 // =====================================
 // Media
 // =====================================
