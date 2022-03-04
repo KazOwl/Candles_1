@@ -235,7 +235,7 @@ body {
 	&__card {
 		position: relative;
 		margin: 1em 0;
-		height: 450px;
+		height: 500px;
 		color: $dirty-white;
 		text-align: center;
 		perspective: 1000px;
@@ -301,13 +301,14 @@ body {
 			transition: transform 1s, opacity 1s;
 
 			&-title {
-				position: absolute;
-				left: 50%;
+				@include newsCardStyles;
 				top: 1.2em;
-				transform: translateX(-50%);
 				font-family: 'Shadows Into Light', cursive;
 				font-size: 2.8rem;
-				letter-spacing: 5px;
+				letter-spacing: 0.1em;
+				width: 60%;
+				color: $secondary-color;
+				
 			}
 
 			&-list {
@@ -327,12 +328,20 @@ body {
 			}
 
 			&-btn {
-				position: absolute;
-				left: 50%;
-				transform: translateX(-50%);
+				@include newsCardStyles;
 				bottom: 2em;
 				cursor: pointer;
 				padding: 1em;
+				border: none;
+				font-size: 1.5rem;
+				font-weight: 400;
+				border-radius: 8px;
+				width: 50%;
+				background-color: $dirty-white;
+				text-transform: uppercase;
+				&::before {
+					background-color: $secondary-color;
+				}
 			}
 		}
 	}
@@ -407,6 +416,19 @@ body {
 			font-size: 2.2rem;
 		}
 	}
+
+	.news{
+		&__cards{
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+
+		&__card {
+			margin: 1em;
+			width: 45%;
+		}
+	}
 }
 
 @media (min-width: 992px) {
@@ -461,6 +483,21 @@ body {
 		hr {
 			width: 90%;
 			max-width: 900px;
+		}
+	}
+
+	.news{
+		&__card-info-list-item{
+			font-size: 1.8rem;
+		}
+	}
+}
+
+
+@media (min-width: 1100px) {
+	.news{
+		&__card{
+			width: 30%;
 		}
 	}
 }
