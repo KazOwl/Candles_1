@@ -370,7 +370,7 @@ body {
 .news__card {
   position: relative;
   margin: 1em 0;
-  height: 500px;
+  height: 600px;
   color: #ebebeb;
   text-align: center;
   -webkit-perspective: 1000px;
@@ -606,6 +606,9 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin: 2em 0;
     width: 100%;
   }
@@ -619,6 +622,7 @@ body {
             order: 1;
   }
   .offers__option-info {
+    width: 50%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -741,7 +745,7 @@ body {
     height: 400px;
   }
   .offers__option-text {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
   }
 }
 

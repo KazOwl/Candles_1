@@ -235,7 +235,7 @@ body {
 	&__card {
 		position: relative;
 		margin: 1em 0;
-		height: 500px;
+		height: 600px;
 		color: $dirty-white;
 		text-align: center;
 		perspective: 1000px;
@@ -442,6 +442,7 @@ body {
 	.offers {
 		&__option {
 			display: flex;
+			justify-content: space-between;
 			margin: 2em 0;
 			width: 100%;
 
@@ -455,9 +456,11 @@ body {
 			}
 
 			&-info {
+				width: 50%;
 				display: flex;
 				flex-direction: column;
 				justify-content: space-between;
+				
 			}
 
 			&-heading {
@@ -587,13 +590,14 @@ body {
 		background-image: $green-gradient url('../img/forest_desktop.jpg');
 
 		&__option {
+
 			&-img {
 				object-fit: cover;
 				height: 400px;
 			}
 
 			&-text {
-				font-size: 1.4rem;
+				font-size: 1.8rem;
 			}
 		}
 	}
