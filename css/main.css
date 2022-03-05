@@ -314,7 +314,7 @@ body {
 }
 
 .header__btn::before {
-  background-color: #fdf2b0;
+  background-color: #fdf1b06b;
 }
 
 .dreams__box {
@@ -467,7 +467,7 @@ body {
   font-size: 2.8rem;
   letter-spacing: 0.1em;
   width: 60%;
-  color: #fdf2b0;
+  color: #fdf1b06b;
 }
 
 .news__card-info-list {
@@ -504,7 +504,74 @@ body {
 }
 
 .news__card-info-btn::before {
-  background-color: #fdf2b0;
+  background-color: #fdf1b06b;
+}
+
+.offers {
+  position: relative;
+  background-image: linear-gradient(45deg, rgba(181, 198, 121, 0.75), rgba(120, 133, 76, 0.75)), url("../img/forest_mobile.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+.offers .section-heading {
+  color: #ebebeb;
+}
+
+.offers__option {
+  margin: 1em 0;
+  background-color: #fff;
+  -webkit-box-shadow: 5px 5px 10px #2e2e2e;
+          box-shadow: 5px 5px 10px #2e2e2e;
+  overflow: hidden;
+}
+
+.offers__option-img {
+  width: 100%;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.offers__option-img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.offers__option-info {
+  padding: 2em;
+  background-color: #fff;
+  z-index: 2;
+}
+
+.offers__option-heading {
+  margin-bottom: 0.5em;
+  font-size: 2.4rem;
+  font-weight: 300;
+}
+
+.offers__option-text {
+  margin-bottom: 0.5em;
+  font-size: 1.3rem;
+  color: #3c3c3c;
+}
+
+.offers__option-btn {
+  margin-top: 1em;
+  padding: 0.8em;
+  width: 100%;
+  color: #5b5b5b;
+  background-color: #c4cea1;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.offers__option-btn::before {
+  background-color: #fdf1b06b;
 }
 
 @media (min-width: 576px) {
@@ -534,6 +601,41 @@ body {
   .dreams__img {
     margin-bottom: 0;
     max-height: 330px;
+  }
+  .offers__option {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 2em 0;
+    width: 100%;
+  }
+  .offers__option-img {
+    width: 50%;
+    height: auto;
+  }
+  .offers__option-img--right {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .offers__option-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .offers__option-heading {
+    margin-bottom: 0.5em;
+    font-size: 3.6rem;
+  }
+  .offers__option-btn {
+    padding: 1em;
   }
 }
 
@@ -629,6 +731,17 @@ body {
   }
   .news__card-info-list-item {
     font-size: 1.8rem;
+  }
+  .offers {
+    background-image: linear-gradient(45deg, rgba(181, 198, 121, 0.75), rgba(120, 133, 76, 0.75)) url("../img/forest_desktop.jpg");
+  }
+  .offers__option-img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 400px;
+  }
+  .offers__option-text {
+    font-size: 1.4rem;
   }
 }
 
