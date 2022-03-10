@@ -171,6 +171,12 @@ body {
           transition-delay: 0.1s;
 }
 
+.black-bars-color,
+.black-bars-color::after,
+.black-bars-color::before {
+  background-color: #3c3c3c;
+}
+
 .nav {
   position: fixed;
   top: 0;

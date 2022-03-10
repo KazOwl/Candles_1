@@ -77,6 +77,13 @@ body {
 		}
 	}
 }
+
+.black-bars-color,
+.black-bars-color::after,
+.black-bars-color::before {
+	background-color: $dark;
+}
+
 //nav
 
 .nav {
@@ -699,7 +706,7 @@ body {
 		&__box-list-item {
 			margin-bottom: 1em;
 
-			a{
+			a {
 				color: $dirty-white;
 				text-decoration: none;
 			}
