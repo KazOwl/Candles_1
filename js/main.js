@@ -1,12 +1,14 @@
 const nav = document.querySelector('.nav')
 const navBtn = document.querySelector('.burger-btn')
 const links = document.querySelectorAll('.nav__item')
+//const navItems = document.querySelectorAll('.nav__items')
 const navBtnBars = document.querySelector('.burger-btn__bars')
 const allSectuions = document.querySelectorAll('.section')
 const footerYear = document.querySelector('.footer__year')
 
 const handleNav = () => {
 	nav.classList.toggle('nav--active')
+
 	navBtnBars.classList.remove('black-bars-color')
 	links.forEach((item) => {
 		item.addEventListener('click', () => {
@@ -53,6 +55,10 @@ const handleObserver = () => {
 			navBtnBars.classList.remove('black-bars-color')
 		}
 	})
+
+	if (nav.classList.contains('nav--active')) {
+		navBtnBars.classList.remove('black-bars-color')
+	}
 }
 
 handleCurrentYear()
